@@ -67,6 +67,13 @@ jobs:
   init-workflow-var:
     runs-on: 'ubuntu-latest'
     steps:
+    - name: test
+      run: |
+        echo "${{github.event.inputs.third_party_copyrights_statements}}"
+        test="test begin:
+          ${{github.event.inputs.third_party_copyrights_statements}}
+          test end"
+        echo "$test"
     - name: Fail if branch is not main
       if: github.ref != 'refs/heads/main'
       run: |
