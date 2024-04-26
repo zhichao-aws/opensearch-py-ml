@@ -48,5 +48,25 @@
         "Embedding Dimension": "N/A",
         "Pooling Mode": "N/A",
         "Workflow Run ID": "6568285400"
+    },
+    {
+        "Model Uploader": "@zhichao-aws",
+        "Upload Time": "2024-04-25 22:13:09",
+        "Model ID": "BAAI/bge-small-en-v1.5",
+        "Model Version": "1.0.0",
+        "Model Format": "ONNX",
+        "Embedding Dimension": "N/A",
+        "Pooling Mode": "N/A",
+        "Workflow Run ID": "8843390731"
+    },
+    {
+        "Model Uploader": "@zhichao-aws",
+        "Upload Time": "2024-04-25 22:13:09",
+        "Model ID": "BAAI/bge-small-en-v1.5",
+        "Model Version": "1.0.0",
+        "Model Format": "TORCH_SCRIPT",
+        "Embedding Dimension": "N/A",
+        "Pooling Mode": "N/A",
+        "Workflow Run ID": "8843390731"
     }
 ]
