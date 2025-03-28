@@ -14,9 +14,11 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Add support for model profiles by @rawwar in ([#358](https://github.com/opensearch-project/opensearch-py-ml/pull/358))
 - Support for security default admin credential changes in 2.12.0 in ([#365](https://github.com/opensearch-project/opensearch-py-ml/pull/365))
 - adding cross encoder models in the pre-trained traced list ([#378](https://github.com/opensearch-project/opensearch-py-ml/pull/378))
-
+- Add workflows and scripts for sparse encoding model tracing and uploading process by @conggguan in ([#394](https://github.com/opensearch-project/opensearch-py-ml/pull/394))
+- Implemented `predict` method and added unit tests by @yerzhaisang([425](https://github.com/opensearch-project/opensearch-py-ml/pull/425))
 
 ### Changed
+- Add a parameter for customize the upload folder prefix ([#398](https://github.com/opensearch-project/opensearch-py-ml/pull/398))
 - Modify ml-models.JenkinsFile so that it takes model format into account and can be triggered with generic webhook by @thanawan-atc in ([#211](https://github.com/opensearch-project/opensearch-py-ml/pull/211))
 - Update demo_tracing_model_torchscript_onnx.ipynb to use make_model_config_json by @thanawan-atc in ([#220](https://github.com/opensearch-project/opensearch-py-ml/pull/220))
 - Bump torch from 1.13.1 to 2.0.1 and add onnx dependency by @thanawan-atc ([#237](https://github.com/opensearch-project/opensearch-py-ml/pull/237))
@@ -39,8 +41,19 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Removed pandas version pin in nox tests by @rawwar ([#368](https://github.com/opensearch-project/opensearch-py-ml/pull/368))
 - Switch AL2 to AL2023 agent and DockerHub to ECR images in ml-models.JenkinsFile ([#377](https://github.com/opensearch-project/opensearch-py-ml/pull/377))
 - Refactored validators in ML Commons' client([#385](https://github.com/opensearch-project/opensearch-py-ml/pull/385))
+- Update model upload history -  opensearch-project/opensearch-neural-sparse-encoding-doc-v2-mini (v.1.0.0)(TORCH_SCRIPT) by @dhrubo-os ([#407](https://github.com/opensearch-project/opensearch-py-ml/pull/407))
+- Update model upload history -  opensearch-project/opensearch-neural-sparse-encoding-doc-v2-distill (v.1.0.0)(TORCH_SCRIPT) by @dhrubo-os ([#405](https://github.com/opensearch-project/opensearch-py-ml/pull/405))
+- Update model upload history -  opensearch-project/opensearch-neural-sparse-encoding-v2-distill (v.1.0.0)(TORCH_SCRIPT) by @dhrubo-os ([#410](https://github.com/opensearch-project/opensearch-py-ml/pull/410))
+- updating listing file with three v2 sparse model - by @dhrubo-os ([#412](https://github.com/opensearch-project/opensearch-py-ml/pull/412))
+- Update model upload history -  opensearch-project/opensearch-neural-sparse-encoding-doc-v2-mini (v.1.0.0)(TORCH_SCRIPT) by @dhrubo-os ([#417](https://github.com/opensearch-project/opensearch-py-ml/pull/417))
+- Update model upload history -  opensearch-project/opensearch-neural-sparse-encoding-v2-distill (v.1.0.0)(TORCH_SCRIPT) by @dhrubo-os ([#419](https://github.com/opensearch-project/opensearch-py-ml/pull/419))
+- Upgrade GitHub Actions workflows to use `@v4` to prevent deprecation issues with `@v3` by @yerzhaisang ([#428](https://github.com/opensearch-project/opensearch-py-ml/pull/428))
+- Bump pandas from 1.5.3 to the latest stable version by @yerzhaisang ([#422](https://github.com/opensearch-project/opensearch-py-ml/pull/422))
+- Upgrade mypy, sphinx, sphinx-rtd-theme, and multiple GitHub Actions (setup-python, backport, codecov-action, create-pull-request, get-pr-commits) by @yerzhaisang([#437](https://github.com/opensearch-project/opensearch-py-ml/pull/437))
 
 ### Fixed
+- Fix the wrong final zip file name in model_uploader workflow, now will name it by the upload_prefix alse.([#413](https://github.com/opensearch-project/opensearch-py-ml/pull/413/files))
+- Fix the wrong input parameter for model_uploader's base_download_path in jekins trigger.([#402](https://github.com/opensearch-project/opensearch-py-ml/pull/402))
 - Enable make_model_config_json to add model description to model config file by @thanawan-atc in ([#203](https://github.com/opensearch-project/opensearch-py-ml/pull/203))
 - Correct demo_ml_commons_integration.ipynb by @thanawan-atc in ([#208](https://github.com/opensearch-project/opensearch-py-ml/pull/208))
 - Handle the case when the model max length is undefined in tokenizer by @thanawan-atc in ([#219](https://github.com/opensearch-project/opensearch-py-ml/pull/219))
@@ -54,6 +67,7 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - fix bug in `MLCommonClient_client.upload_model` by @rawwar in ([#336](https://github.com/opensearch-project/opensearch-py-ml/pull/336))
 - fix lint issues on main by @rawwar in ([#374](https://github.com/opensearch-project/opensearch-py-ml/pull/374))
 - fix CVE vulnerability by @rawwar in ([#383](https://github.com/opensearch-project/opensearch-py-ml/pull/383))
+- refactor: replace 'payload' with 'body' in `create_standalone_connector` by @yerzhaisang ([#424](https://github.com/opensearch-project/opensearch-py-ml/pull/424))
 
 ## [1.1.0]
 
