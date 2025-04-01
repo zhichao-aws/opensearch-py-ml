@@ -68,5 +68,25 @@
         "Embedding Dimension": "N/A",
         "Pooling Mode": "N/A",
         "Workflow Run ID": "10357363209"
+    },
+    {
+        "Model Uploader": "@zhichao-aws",
+        "Upload Time": "2025-04-01 02:22:01",
+        "Model ID": "sentence-transformers/all-MiniLM-L6-v2",
+        "Model Version": "1.0.0",
+        "Model Format": "ONNX",
+        "Embedding Dimension": "N/A",
+        "Pooling Mode": "N/A",
+        "Workflow Run ID": "14191902048"
+    },
+    {
+        "Model Uploader": "@zhichao-aws",
+        "Upload Time": "2025-04-01 02:22:01",
+        "Model ID": "sentence-transformers/all-MiniLM-L6-v2",
+        "Model Version": "1.0.0",
+        "Model Format": "TORCH_SCRIPT",
+        "Embedding Dimension": "N/A",
+        "Pooling Mode": "N/A",
+        "Workflow Run ID": "14191902048"
     }
 ]
