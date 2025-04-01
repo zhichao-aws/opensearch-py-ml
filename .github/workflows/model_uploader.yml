@@ -114,10 +114,12 @@ jobs:
           [ -n "$tmp_mn" ] && model_name="$tmp_mn"
         fi
 
+        echo $upload_prefix
         echo "upload_prefix=$upload_prefix" >> $$GITHUB_OUTPUT
         echo "sparse_prune_ratio=$sparse_prune_ratio" >> $GITHUB_OUTPUT
         echo "activation=$activation" >> $GITHUB_OUTPUT
         echo "model_name=$model_name" >> $GITHUB_OUTPUT
+        echo $upload_prefix
     - name: Initiate folders
       # This scripts init the folders path variables.
       # 1. Retrieves the input model_id.
@@ -131,6 +133,7 @@ jobs:
       # 4. Constructs model_folder and model_prefix_folder
       id: init_folders
       run: |
+        echo "${{ steps.parse_custom_params.outputs.upload_prefix }}"
         model_id=${{ github.event.inputs.model_id }}
         if [[ -n "${{ steps.parse_custom_params.outputs.upload_prefix }}" ]]; then
           model_prefix="ml-models/${{ github.event.inputs.model_source }}/${{ steps.parse_custom_params.outputs.upload_prefix }}"
