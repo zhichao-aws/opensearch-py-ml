@@ -100,7 +100,7 @@ jobs:
         upload_prefix=""
         sparse_prune_ratio=0
         activation=""
-        model_name='${model_id##*/}'
+        model_name="${model_id##*/}"
 
         if [ "$custom_params" != "{}" ] && [ -n "$custom_params" ]; then
           tmp_up=$(echo "$custom_params" | jq -r '.upload_prefix | select(.!=null)')
@@ -164,8 +164,8 @@ jobs:
         - Model Description: ${model_description:-N/A}
         - Model Folder: ${{ steps.init_folders.outputs.model_folder }}
         - Model Prefix Folder: ${{ steps.init_folders.outputs.model_prefix_folder }}
-        - Sparse Prune Ratio: ${{ env.SPARSE_PRUNE_RATIO }}
-        - Activation: ${{ env.ACTIVATION || 'N/A' }}
+        - Sparse Prune Ratio: ${{ steps.parse_custom_params.outputs.sparse_prune_ratio || 'N/A' }}
+        - Activation: ${{ steps.parse_custom_params.outputs.activation || 'N/A' }}
         
         ======== Workflow Output Information =========
         - Embedding Verification: Passed"
