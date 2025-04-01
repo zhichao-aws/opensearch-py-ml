@@ -133,6 +133,7 @@ jobs:
       # 4. Constructs model_folder and model_prefix_folder
       id: init_folders
       run: |
+        echo "Raw upload_prefix: ${{ toJSON(steps.parse_custom_params.outputs) }}"
         echo "${{ steps.parse_custom_params.outputs.upload_prefix }}"
         model_id=${{ github.event.inputs.model_id }}
         if [[ -n "${{ steps.parse_custom_params.outputs.upload_prefix }}" ]]; then
