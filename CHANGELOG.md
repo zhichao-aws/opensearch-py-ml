@@ -31,6 +31,7 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Update pretrained_models_all_versions.json (2025-06-02 17:57:40) by @nathaliellenaa ([#547](https://github.com/opensearch-project/opensearch-py-ml/pull/547))
 - Update pretrained_models_all_versions.json by @nathaliellenaa ([#548](https://github.com/opensearch-project/opensearch-py-ml/pull/548))
 - Update model upload history -  opensearch-project/opensearch-semantic-highlighter-v1 (v.1.0.0)(TORCH_SCRIPT) by @nathaliellenaa ([#550](https://github.com/opensearch-project/opensearch-py-ml/pull/550))
+- Update model upload history -  opensearch-project/opensearch-neural-sparse-encoding-doc-v3-gte (v.1.0.0)(TORCH_SCRIPT) by @zhichao-aws ([#24](https://github.com/zhichao-aws/opensearch-py-ml/pull/24))
 
 ### Fixed
 
